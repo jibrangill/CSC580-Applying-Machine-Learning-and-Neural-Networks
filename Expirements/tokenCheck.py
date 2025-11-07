@@ -1,0 +1,1 @@
+import {anthropic} from '@aisdk/anthropic'
