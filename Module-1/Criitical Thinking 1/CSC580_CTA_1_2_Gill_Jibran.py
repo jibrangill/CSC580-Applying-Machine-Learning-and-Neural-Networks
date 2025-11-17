@@ -15,14 +15,16 @@ def run_cycle(num_vars, coefficients, test_input=None):
 
     print("\n==========================================")
     print("The algebraic equation being modeled is:")
-    print(f"y = {equation_str}")
+    print(f"x = {equation_str}")
     print("==========================================\n")
 
     train_input = []
     train_output = []
-    for _ in range(TRAIN_SET_COUNT):
+    for i in range(TRAIN_SET_COUNT):
         inputs = [randint(0, TRAIN_SET_LIMIT) for _ in range(num_vars)]
         output = sum(c * x for c, x in zip(coefficients, inputs))
+        print(f'Training Dataset row {i + 1}: {inputs} = ', end = "")
+        print(output)
         train_input.append(inputs)
         train_output.append(output)
 
@@ -107,7 +109,6 @@ def manual_mode():
         coefficients.append(coef)
 
     run_cycle(num_vars, coefficients)
-
 
 def predefined_mode():
     presets = {
