@@ -1,0 +1,118 @@
+[INFO] Loading training and test data ...
+[INFO] Applying MinMax scaling...
+Note: total_earnings values were scaled by multiplying by 0.0000036968 and adding -0.115913
+[INFO] Splitting Features and Labels...
+[INFO] Building and training neural network model...
+[INFO] Training model for 50 epochs...
+Epoch 1/50
+25/25 - 1s - 32ms/step - loss: 0.0802 - val_loss: 0.0325
+Epoch 2/50
+25/25 - 0s - 4ms/step - loss: 0.0202 - val_loss: 0.0157
+Epoch 3/50
+25/25 - 0s - 4ms/step - loss: 0.0114 - val_loss: 0.0100
+Epoch 4/50
+25/25 - 0s - 5ms/step - loss: 0.0071 - val_loss: 0.0060
+Epoch 5/50
+25/25 - 0s - 5ms/step - loss: 0.0042 - val_loss: 0.0040
+Epoch 6/50
+25/25 - 0s - 5ms/step - loss: 0.0027 - val_loss: 0.0028
+Epoch 7/50
+25/25 - 0s - 6ms/step - loss: 0.0019 - val_loss: 0.0021
+Epoch 8/50
+25/25 - 0s - 5ms/step - loss: 0.0015 - val_loss: 0.0017
+Epoch 9/50
+25/25 - 0s - 4ms/step - loss: 0.0012 - val_loss: 0.0015
+Epoch 10/50
+25/25 - 0s - 5ms/step - loss: 0.0010 - val_loss: 0.0012
+Epoch 11/50
+25/25 - 0s - 5ms/step - loss: 8.4291e-04 - val_loss: 0.0011
+Epoch 12/50
+25/25 - 0s - 4ms/step - loss: 7.1323e-04 - val_loss: 8.7368e-04
+Epoch 13/50
+25/25 - 0s - 4ms/step - loss: 6.0658e-04 - val_loss: 7.9912e-04
+Epoch 14/50
+25/25 - 0s - 5ms/step - loss: 5.4103e-04 - val_loss: 7.5857e-04
+Epoch 15/50
+25/25 - 0s - 5ms/step - loss: 4.7605e-04 - val_loss: 6.7888e-04
+Epoch 16/50
+25/25 - 0s - 4ms/step - loss: 4.2209e-04 - val_loss: 6.1691e-04
+Epoch 17/50
+25/25 - 0s - 5ms/step - loss: 3.9001e-04 - val_loss: 5.5471e-04
+Epoch 18/50
+25/25 - 0s - 5ms/step - loss: 3.3815e-04 - val_loss: 5.6830e-04
+Epoch 19/50
+25/25 - 0s - 4ms/step - loss: 3.1457e-04 - val_loss: 5.0352e-04
+Epoch 20/50
+25/25 - 0s - 5ms/step - loss: 2.8621e-04 - val_loss: 4.9393e-04
+Epoch 21/50
+25/25 - 0s - 5ms/step - loss: 2.6258e-04 - val_loss: 4.9334e-04
+Epoch 22/50
+25/25 - 0s - 5ms/step - loss: 2.4933e-04 - val_loss: 4.4781e-04
+Epoch 23/50
+25/25 - 0s - 4ms/step - loss: 2.2728e-04 - val_loss: 4.3306e-04
+Epoch 24/50
+25/25 - 0s - 4ms/step - loss: 2.0896e-04 - val_loss: 4.2113e-04
+Epoch 25/50
+25/25 - 0s - 5ms/step - loss: 1.9159e-04 - val_loss: 4.0586e-04
+Epoch 26/50
+25/25 - 0s - 5ms/step - loss: 1.8217e-04 - val_loss: 4.0708e-04
+Epoch 27/50
+25/25 - 0s - 6ms/step - loss: 1.7406e-04 - val_loss: 4.1074e-04
+Epoch 28/50
+25/25 - 0s - 5ms/step - loss: 1.6262e-04 - val_loss: 3.9320e-04
+Epoch 29/50
+25/25 - 0s - 5ms/step - loss: 1.5735e-04 - val_loss: 3.7890e-04
+Epoch 30/50
+25/25 - 0s - 4ms/step - loss: 1.4586e-04 - val_loss: 3.7328e-04
+Epoch 31/50
+25/25 - 0s - 4ms/step - loss: 1.4138e-04 - val_loss: 3.6936e-04
+Epoch 32/50
+25/25 - 0s - 4ms/step - loss: 1.4091e-04 - val_loss: 3.6519e-04
+Epoch 33/50
+25/25 - 0s - 4ms/step - loss: 1.3111e-04 - val_loss: 3.4776e-04
+Epoch 34/50
+25/25 - 0s - 5ms/step - loss: 1.2736e-04 - val_loss: 3.4407e-04
+Epoch 35/50
+25/25 - 0s - 4ms/step - loss: 1.1747e-04 - val_loss: 3.2026e-04
+Epoch 36/50
+25/25 - 0s - 5ms/step - loss: 1.1324e-04 - val_loss: 3.1708e-04
+Epoch 37/50
+25/25 - 0s - 5ms/step - loss: 1.1215e-04 - val_loss: 3.0125e-04
+Epoch 38/50
+25/25 - 0s - 6ms/step - loss: 1.0013e-04 - val_loss: 2.9878e-04
+Epoch 39/50
+25/25 - 0s - 5ms/step - loss: 9.6465e-05 - val_loss: 2.8920e-04
+Epoch 40/50
+25/25 - 0s - 5ms/step - loss: 9.0858e-05 - val_loss: 2.8319e-04
+Epoch 41/50
+25/25 - 0s - 6ms/step - loss: 8.4345e-05 - val_loss: 2.7648e-04
+Epoch 42/50
+25/25 - 0s - 4ms/step - loss: 8.3917e-05 - val_loss: 2.6568e-04
+Epoch 43/50
+25/25 - 0s - 5ms/step - loss: 8.1856e-05 - val_loss: 2.7420e-04
+Epoch 44/50
+25/25 - 0s - 7ms/step - loss: 7.8119e-05 - val_loss: 2.5011e-04
+Epoch 45/50
+25/25 - 0s - 5ms/step - loss: 7.5386e-05 - val_loss: 2.6579e-04
+Epoch 46/50
+25/25 - 0s - 4ms/step - loss: 8.6018e-05 - val_loss: 3.0038e-04
+Epoch 47/50
+25/25 - 0s - 5ms/step - loss: 7.5319e-05 - val_loss: 2.4944e-04
+Epoch 48/50
+25/25 - 0s - 4ms/step - loss: 7.3647e-05 - val_loss: 2.3631e-04
+Epoch 49/50
+25/25 - 0s - 5ms/step - loss: 7.6629e-05 - val_loss: 2.3700e-04
+Epoch 50/50
+25/25 - 0s - 5ms/step - loss: 6.6817e-05 - val_loss: 2.4396e-04
+[INFO] Evaluating model on test dataset...
+[INFO] Saving trained model to disk (trained_model.h5)...
+[INFO] Loading trained model back from disk...
+[INFO] Scaling new product row using same scaler...
+[INFO] Generating prediction...
+
+[1m1/1[0m [32m====================[0m[37m[0m [1m0s[0m 48ms/step
+[1m1/1[0m [32m====================[0m[37m[0m [1m0s[0m 64ms/step
+[INFO] Plotting training and validation loss curves...
+
+[INFO] Process completed successfully.
+
