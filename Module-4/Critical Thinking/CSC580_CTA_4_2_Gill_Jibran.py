@@ -2,12 +2,12 @@ import numpy as np
 import tensorflow as tf
 import matplotlib.pyplot as plt
 
-# Make TF2 behave like TF1
+# disable the eager execution of TF2
 tf.compat.v1.disable_eager_execution()
 
 # Generate synthetic data
 N = 100
-np.random.seed(0)  # for reproducibility
+np.random.seed(0) 
 
 # Zeros form a Gaussian centered at (-1, -1)
 x_zeros = np.random.multivariate_normal(
@@ -23,19 +23,6 @@ y_ones = np.ones((N // 2,))
 
 x_np = np.vstack([x_zeros, x_ones]).astype(np.float32)
 y_np = np.concatenate([y_zeros, y_ones]).astype(np.float32)
-
-
-#Plot x_zeros and x_ones
-plt.figure()
-plt.scatter(x_zeros[:, 0], x_zeros[:, 1], label='Class 0')
-plt.scatter(x_ones[:, 0], x_ones[:, 1], label='Class 1')
-plt.title('Synthetic Data (Class 0 vs Class 1)')
-plt.xlabel('x1')
-plt.ylabel('x2')
-plt.legend()
-plt.grid(True)
-plt.tight_layout()
-plt.show()
 
 #Generate TensorFlow graph
 with tf.name_scope("placeholders"):
@@ -99,20 +86,49 @@ with tf.compat.v1.Session() as sess:
         [W, b, y_one_prob, y_pred], feed_dict={x: x_np, y: y_np}
     )
 
+# close writer
+train_writer.close()
 
-#Plot predicted outputs
-plt.figure()
-#Color points by predicted class
-plt.scatter(x_np[:, 0], x_np[:, 1], c=y_pred_val, cmap='bwr', alpha=0.8)
-plt.title('Predicted Classes on Synthetic Data')
-plt.xlabel('x1')
-plt.ylabel('x2')
-plt.grid(True)
+accuracy = np.mean(y_pred_val == y_np)
+#Plot synthetic data and predicted outputs in a single window
+fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(11, 5))
+
+#left: original synthetic data (class 0 vs class 1)
+ax1.scatter(x_zeros[:, 0], x_zeros[:, 1], label='Class 0', color='blue')
+ax1.scatter(x_ones[:, 0], x_ones[:, 1], label='Class 1', color='red')
+ax1.set_title('Synthetic Data (Class 0 vs Class 1)')
+ax1.set_xlabel('x1')
+ax1.set_ylabel('x2')
+ax1.legend()
+ax1.grid(True)
+
+#right: predicted classes
+scatter2 = ax2.scatter(x_np[:, 0], x_np[:, 1], c=y_pred_val, cmap='bwr', alpha=0.8)
+ax2.set_title('Predicted Classes on Synthetic Data')
+ax2.set_xlabel('x1')
+ax2.set_ylabel('x2')
+ax2.grid(True)
+
+#manual legend for predicted colors
+class0_proxy = ax2.scatter([], [], color='blue', label='Predicted Class 0')
+class1_proxy = ax2.scatter([], [], color='red', label='Predicted Class 1')
+ax2.legend(handles=[class0_proxy, class1_proxy])
+
+#Print accuracy and learned parameters inside the subplot
+stats_text = (
+    f"Accuracy: {accuracy:.2f}\n"
+    f"W = [{W_val[0][0]:.3f}, {W_val[1][0]:.3f}]\n"
+    f"b = {b_val[0]:.3f}"
+)
+
+#place text in upper-left area of right subplot
+ax2.text(
+    0.05, 0.95, stats_text,
+    transform=ax2.transAxes,
+    fontsize=10,
+    verticalalignment='top',
+    bbox=dict(boxstyle="round,pad=0.3", edgecolor="black", facecolor="white")
+)
+
 plt.tight_layout()
 plt.show()
-
-#print accuracy and parameters for write-up
-accuracy = np.mean(y_pred_val == y_np)
-print("Final accuracy on training data:", accuracy)
-print("Learned weights W:\n", W_val)
-print("Learned bias b:\n", b_val)
