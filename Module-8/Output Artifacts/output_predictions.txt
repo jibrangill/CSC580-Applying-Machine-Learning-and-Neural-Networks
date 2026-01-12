@@ -1,0 +1,29 @@
+CSC580 Option #2 - Encoder–Decoder LSTM Seq2Seq
+Toy Problem: target = reverse(first 3 items of 6-item input)
+
+Training samples: 30000
+n_features=51, n_steps_in=6, n_steps_out=3, n_units=128
+Final training loss: 0.00021091860253363848
+Final training accuracy: 1.0
+
+Evaluation (n=100): Accuracy: 100.00%
+
+Sample predictions:
+X=[33, 24, 8, 38, 7, 46] y=[8, 24, 33], yhat=[8, 24, 33]
+X=[10, 5, 44, 33, 12, 5] y=[44, 5, 10], yhat=[44, 5, 10]
+X=[25, 2, 33, 32, 39, 38] y=[33, 2, 25], yhat=[33, 2, 25]
+X=[38, 49, 46, 39, 26, 50] y=[46, 49, 38], yhat=[46, 49, 38]
+X=[33, 1, 15, 47, 11, 20] y=[15, 1, 33], yhat=[15, 1, 33]
+X=[23, 11, 25, 40, 34, 34] y=[25, 11, 23], yhat=[25, 11, 23]
+X=[39, 10, 47, 5, 24, 39] y=[47, 10, 39], yhat=[47, 10, 39]
+X=[20, 41, 12, 15, 29, 30] y=[12, 41, 20], yhat=[12, 41, 20]
+X=[13, 11, 39, 28, 18, 6] y=[39, 11, 13], yhat=[39, 11, 13]
+X=[15, 24, 25, 24, 13, 4] y=[25, 24, 15], yhat=[25, 24, 15]
+
+Saved plots (for screenshots):
+- training_history.png
+- prediction_accuracy.png
+- decoder_confidence.png (confidence per decoder step)
+
+Example used for decoder confidence plot:
+X=[33, 24, 8, 38, 7, 46] y=[8, 24, 33], yhat=[8, 24, 33]
