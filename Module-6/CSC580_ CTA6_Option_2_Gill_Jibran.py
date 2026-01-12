@@ -1,3 +1,9 @@
+'''
+Gill_Jibran
+Module-6 Option-2, Critical Thinking Assignment
+CSC-580 Dr. Li
+'''
+
 import os
 import glob
 from collections import defaultdict
